@@ -4,9 +4,10 @@ type User = {
   isActive: boolean;
 };
 
-// we create this for all data types if we need
+// You can actually use a type alias to give a name to any type at all, not just an object type. For example, 
 type Mystring = string;
-// but no need to do this
+
+
 
 function createUser(user: User) {}
 
