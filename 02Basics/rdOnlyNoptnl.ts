@@ -39,3 +39,5 @@ type cardDetailss = cardNumber & cardDate & {
 }
 
 // previous exmaple is better 
+
+export{}
