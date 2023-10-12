@@ -21,6 +21,7 @@ class User2 {
         this.userId = userId;
         this.city = "Pune";
         this._courseCount = 1;
+        this.result = "Pass ";
     }
     get getAppleEmail() {
         return `apple${this.email}`;
@@ -38,5 +39,16 @@ class User2 {
             throw new Error("course count should be more than 1");
         }
         this._courseCount = coursenum;
+    }
+}
+// it cannot  aquire the property which mention as private 
+class SubUser extends User2 {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    // protected properties can accesable in parent class also in class that inherite parent class 
+    chnageResult() {
+        this.result = "Fail";
     }
 }

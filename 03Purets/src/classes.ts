@@ -25,11 +25,13 @@ Gaurav.city = "Banglore";
 class User2 {
   readonly city: string = "Pune";
   private _courseCount: number = 1;
+  protected result : string = "Pass " 
   constructor(
     public email: string,
     public name: string,
     private userId: string
   ) {}
+
   get getAppleEmail(): string {
     return `apple${this.email}`;
   }
@@ -52,4 +54,14 @@ private deleteToken(){
     }
     this._courseCount = coursenum;
   }
+}
+
+
+// it cannot  aquire the property which mention as private 
+class SubUser extends User2{
+    isFamily : boolean = true
+    // protected properties can accesable in parent class also in class that inherite parent class 
+    chnageResult(){
+        this.result = "Fail"
+    }
 }
